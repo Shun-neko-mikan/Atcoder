@@ -3,14 +3,15 @@ using namespace std;
 int main(void){
     int n;
     cin >> n;
-    vector <int> a;
+    string w;
     for(int i = 0;i < n; i++){
-        int tmp;
-        cin >> tmp;
-        if( tmp % 2 == 0) a.push_back(tmp);
+        cin >> w;
+        if(w == "and" || w == "not" || w == "that" || w == "the" || w == "you"){
+            cout << "Yes" << endl;
+            return 0;
+        }
     }
-    for(int i = 0;i < a.size(); i++){
-        cout << a[i]<< ' ';
-    }
+    cout << "No" << endl;
+
     return 0;
 }
